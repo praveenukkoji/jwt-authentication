@@ -36,7 +36,7 @@ public class AppUserServiceImplementation implements AppUserService{
     public void addRoleToAppUser(String username, String rolename) {
         log.info("Adding role {} to user {}", rolename, username);
         AppUser user = userRepository.findByUsername(username);
-        Role role = roleRepository.findByRoleName(rolename);
+        Role role = roleRepository.findByRolename(rolename);
         user.getRoles().add(role);
     }
 
